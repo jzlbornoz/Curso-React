@@ -5,9 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Maven Pro', sans-serif;
 }
+
+:root{
+  --color5: #A22C29;
+  --color3: #B9BAA3;
+  --color1: #D6D5C9;
+  --color2: #fff2f2;
+  --color6: rgb(0, 153, 20);
+}
+ 

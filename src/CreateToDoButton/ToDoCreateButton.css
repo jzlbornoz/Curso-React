@@ -1,0 +1,23 @@
+.mainButton{
+    border-radius: 5rem;
+    background-color: var(--color5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 4rem;
+    color: white;
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.mainButton:hover{
+    background-color: var(--color6);
+    transform: rotate(224deg);
+}

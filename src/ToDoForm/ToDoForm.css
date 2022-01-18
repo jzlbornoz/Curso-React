@@ -1,0 +1,49 @@
+.wrapperF{
+    background-color: var(--color1);
+    padding: 1.5rem;
+}
+
+.FormM{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.FormM label {
+    width: 90%;
+    font-size: 2rem;
+    color: var(--color5);
+    margin-bottom: 1rem;
+}
+
+.FormM textarea{
+    width: 90%;
+    resize: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--color5);
+    outline: none;
+}
+.FormM textarea:hover{
+    border-color: var(--color6);
+}
+
+.buttonAdd{
+    background-color: var(--color5);
+    padding: 0.4rem;
+    color: var(--color1);
+    border: none;
+}
+
+.buttonAdd:hover{
+    background-color: var(--color6);
+}
+
+.buttonX{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+}
+
