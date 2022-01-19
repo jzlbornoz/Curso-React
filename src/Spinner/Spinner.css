@@ -1,7 +1,7 @@
 .Spinner{
     display: flex;
     justify-content: center;
-    color: var(--color2);
+    color: var(--color5);
     margin-top: 2rem;
 }
 

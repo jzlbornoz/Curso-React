@@ -1,4 +1,5 @@
 import React from "react";
+import { Header } from "../Header";
 import {ToDoCounter} from "../ToDoCounter";
 import {ToDoSearch} from "../ToDoSearch";
 import {ToDoList} from "../ToDoList";
@@ -17,12 +18,21 @@ const { error ,
         toCompleteToDo , 
         toDeleteToDo , 
         openModal , 
-        setOpenModal } = React.useContext(ToDoContext);
+        setOpenModal,
+        totalToDo, 
+        completedToDo,
+        searchValue , 
+        setSearchValue } = React.useContext(ToDoContext);
 
     return(
 <section className='section'>
-    <ToDoCounter/>
-    <ToDoSearch/>
+    <Header>
+
+    <ToDoCounter totalToDo ={totalToDo} completedToDo ={completedToDo}/>
+    <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
+    
+    </Header>
+    
     <ToDoList>
         {error && <p>Se ha producido un Error...</p>}
         {loading && <Spinner/>}
