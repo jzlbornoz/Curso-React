@@ -1,14 +1,12 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const ToDoContext = React.createContext();
 
-function ToDoProvider(props) {
+function useToDo() {
 
 const {item: ToDo , saveItem: saveToDo , loading , error} = useLocalStorage('ToDO_V1' , []);
 
 const [searchValue , setSearchValue] = React.useState('');
-
 const [openModal , setOpenModal] = React.useState(false);
 
 //contador
@@ -57,8 +55,7 @@ const toDeleteToDo = (text) => {
     saveToDo(newToDo);
     };
 
-    return (
-        <ToDoContext.Provider value={{
+    return {
             completedToDo,
             totalToDo,
             searchValue,
@@ -71,10 +68,7 @@ const toDeleteToDo = (text) => {
             openModal, 
             setOpenModal,
             addToDo,
-        }}>
-            {props.children}
-        </ToDoContext.Provider>
-    )
+        }
 };
 
-export {ToDoContext , ToDoProvider};
+export {useToDo};
