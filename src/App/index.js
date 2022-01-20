@@ -7,16 +7,17 @@ import {ToDoSearch} from "../ToDoSearch";
 import {ToDoList} from "../ToDoList";
 import { ToDoItem } from '../ToDoItem';
 import { CreateToDoButton } from '../CreateToDoButton';
-import { ToDoContext } from ".";
 import { Modal } from "../Modal";
 import { ToDoForm } from "../ToDoForm";
 import { Spinner } from "../Spinner";
 import { Blind } from "../NoFound";
+import {  OnError } from "../OnError";
 
 
 function App() {
 
-  const { error , 
+  const { 
+    error , 
     loading , 
     searchedToDo ,
     toCompleteToDo , 
@@ -32,27 +33,25 @@ function App() {
   return(
 <section className='section'>
     <Header>
-
-    <ToDoCounter totalToDo ={totalToDo} completedToDo ={completedToDo}/>
-    <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
-    
+      <ToDoCounter totalToDo ={totalToDo} completedToDo ={completedToDo}/>
+      <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
     </Header>
     
-    <ToDoList>
-        {error && <p>Se ha producido un Error...</p>}
-        {loading && <Spinner/>}
-        {(!loading && !searchedToDo.length) && <Blind/>}
-
-        {searchedToDo.map( todo =>(
-        <ToDoItem 
-          key={todo.text} 
-          text={todo.text}
-          completed={todo.completed}
-          onComplete={() => toCompleteToDo(todo.text) }
-          onDelete={() => toDeleteToDo(todo.text) }
-        />
-        ))}
-    </ToDoList>
+    <ToDoList
+              error = {error}
+              loading = {loading}
+              searchedToDo = {searchedToDo}
+              onError = {() => <OnError/>} 
+              onLoading = {() => <Spinner/>} 
+              onEmpty = {() => <Blind/>}
+              render = { todo => (
+                <ToDoItem key={todo.text} 
+                           text={todo.text}
+                           completed={todo.completed}
+                           onComplete={() => toCompleteToDo(todo.text) }
+                           onDelete={() => toDeleteToDo(todo.text) }
+                />)}
+    />
 
     {!!openModal && (
         <Modal>
