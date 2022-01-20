@@ -11,3 +11,7 @@ input{
 input:focus{
     outline-color: var(--color5);
 }
+
+input:disabled{
+    opacity: 20%;
+}

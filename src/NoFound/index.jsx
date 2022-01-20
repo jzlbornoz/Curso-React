@@ -1,4 +1,5 @@
 import {FaBlind} from 'react-icons/fa';
+import {FaEyeSlash} from 'react-icons/fa';
 import "./Blind.css";
 
 function Blind() {
@@ -11,4 +12,15 @@ function Blind() {
         )
 };
 
-export { Blind }
+function NoFound(props) {
+    const texto = props.text;
+    return(
+        <div className='NoFound'>
+            <FaEyeSlash size={60}/>
+            <p>No hay hay resultados para:{" " + texto}</p>
+        </div>
+    )
+}
+
+export { Blind };
+export { NoFound};

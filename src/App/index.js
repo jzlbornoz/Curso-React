@@ -11,7 +11,8 @@ import { Modal } from "../Modal";
 import { ToDoForm } from "../ToDoForm";
 import { Spinner } from "../Spinner";
 import { Blind } from "../NoFound";
-import {  OnError } from "../OnError";
+import { NoFound } from '../NoFound';
+import { OnError } from "../OnError";
 
 
 function App() {
@@ -32,26 +33,37 @@ function App() {
 
   return(
 <section className='section'>
-    <Header>
-      <ToDoCounter totalToDo ={totalToDo} completedToDo ={completedToDo}/>
-      <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
+    <Header loading={loading}>
+      <ToDoCounter totalToDo ={totalToDo} completedToDo ={completedToDo} />
+      <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
     </Header>
     
     <ToDoList
               error = {error}
               loading = {loading}
               searchedToDo = {searchedToDo}
+              totalToDo = {totalToDo}
+              searchText = {searchValue}
               onError = {() => <OnError/>} 
               onLoading = {() => <Spinner/>} 
               onEmpty = {() => <Blind/>}
-              render = { todo => (
+              onEmptyResult = {(searchText) => <NoFound text={searchText}/>}
+              // render = { todo => (
+              //   <ToDoItem key={todo.text} 
+              //              text={todo.text}
+              //              completed={todo.completed}
+              //              onComplete={() => toCompleteToDo(todo.text) }
+              //              onDelete={() => toDeleteToDo(todo.text) }
+              //   />)} este codigo se comenta porque se esta pasando el de abajo (es el mismo codigo pero se pasa como children)
+    >
+      { todo => (
                 <ToDoItem key={todo.text} 
                            text={todo.text}
                            completed={todo.completed}
                            onComplete={() => toCompleteToDo(todo.text) }
                            onDelete={() => toDeleteToDo(todo.text) }
                 />)}
-    />
+    </ToDoList>
 
     {!!openModal && (
         <Modal>

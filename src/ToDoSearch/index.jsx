@@ -1,7 +1,7 @@
 import React from "react";
 import "./ToDoSearch.css"
 
-function ToDoSearch({searchValue , setSearchValue}) {
+function ToDoSearch({searchValue , setSearchValue , loading}) {
 
 const onSearchValueChange = (event) =>{
     console.log(event.target.value);
@@ -13,6 +13,7 @@ const onSearchValueChange = (event) =>{
         placeholder="Buscar"
         value={searchValue} 
         onChange={onSearchValueChange}
+        disabled = {loading}
         />);
 };
 
