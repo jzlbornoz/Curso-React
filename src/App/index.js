@@ -13,6 +13,7 @@ import { Spinner } from "../Spinner";
 import { Blind } from "../NoFound";
 import { NoFound } from '../NoFound';
 import { OnError } from "../OnError";
+import { ChangeAlertwithStorageListener } from "../ChangeAlert";
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
     completedToDo,
     searchValue , 
     setSearchValue,
-    addToDo, } = useToDo();
+    addToDo,
+    sincronizeToDo } = useToDo();
 
   return(
 <section className='section'>
@@ -72,6 +74,9 @@ function App() {
     )}
 
     <CreateToDoButton setOpenModal={setOpenModal}/>
+
+      <ChangeAlertwithStorageListener sincronizeToDo={sincronizeToDo} />
+
 </section>
     )
 };
