@@ -1,6 +1,20 @@
 body{
     padding: 4rem;
-    background-color: var(--color1);
+    background-image: linear-gradient(
+  180deg,
+  hsl(183deg 99% 67%) 0%,
+  hsl(183deg 99% 77%) 10%,
+  hsl(183deg 99% 84%) 20%,
+  hsl(183deg 99% 90%) 29%,
+  hsl(183deg 98% 95%) 39%,
+  hsl(0deg 0% 100%) 48%,
+  hsl(183deg 98% 95%) 57%,
+  hsl(183deg 99% 90%) 67%,
+  hsl(183deg 99% 84%) 78%,
+  hsl(183deg 99% 77%) 89%,
+  hsl(183deg 99% 67%) 100%
+);
+    background-repeat: inherit;
 }
 
 .section{    
