@@ -1,6 +1,7 @@
 .wrapperF{
     background-color: var(--color1);
     padding: 1.5rem;
+    border-radius: 20px;
 }
 
 .FormM{
@@ -14,6 +15,7 @@
     font-size: 2rem;
     color: var(--color5);
     margin-bottom: 1rem;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .FormM textarea{
@@ -23,6 +25,7 @@
     font-size: 1rem;
     border: 1px solid var(--color5);
     outline: none;
+    border-radius: 7px;
 }
 .FormM textarea:hover{
     border-color: var(--color6);
@@ -30,9 +33,10 @@
 
 .buttonAdd{
     background-color: var(--color5);
-    padding: 0.4rem;
+    padding: 0.6rem;
     color: var(--color1);
     border: none;
+    border-radius: 10px;
 }
 
 .buttonAdd:hover{
@@ -45,5 +49,9 @@
     font-size: 1rem;
     cursor: pointer;
     display: flex;
+}
+
+.buttonX:hover{
+    color: red;
 }
 

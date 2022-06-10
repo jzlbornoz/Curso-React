@@ -1,26 +1,13 @@
 body{
     padding: 4rem;
-    background-image: linear-gradient(
-  180deg,
-  hsl(183deg 99% 67%) 0%,
-  hsl(183deg 99% 77%) 10%,
-  hsl(183deg 99% 84%) 20%,
-  hsl(183deg 99% 90%) 29%,
-  hsl(183deg 98% 95%) 39%,
-  hsl(0deg 0% 100%) 48%,
-  hsl(183deg 98% 95%) 57%,
-  hsl(183deg 99% 90%) 67%,
-  hsl(183deg 99% 84%) 78%,
-  hsl(183deg 99% 77%) 89%,
-  hsl(183deg 99% 67%) 100%
-);
-    background-repeat: inherit;
+    background-color: var(--color2);
 }
 
 .section{    
     background-color: var(--color3);
     padding: 0 1.5rem 1.5rem 1.5rem;
     border-radius: 1rem;
+    box-shadow:12px 17px 44px 5px rgba(0,0,0,0.47);
 }
 
 @media (max-width: 1024px){

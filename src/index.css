@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -16,7 +12,7 @@ code {
   --color5: #009198;
   --color3: #ffffff;
   --color1: #ffffff;
-  --color2: #fff2f2;
+  --color2: #e3e3e3;
   --color6: rgb(0, 153, 20);
 }
  
