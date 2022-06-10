@@ -1,11 +1,17 @@
-# Getting Started with Create React App
+## To Do PWA
+PWA desarrollada en ReactJS en la que puedes llevar tus tareas y organizarte.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+-Persistencia de Datos
+-Soporte Ofline con workbox
+-Add to Home Screen
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+-`npm install`
+-`npm start`
+-`npm run build`
 
-### `npm start`
 
-### `npm run build`
+## App
+- https://todoapp-jz.web.app/
